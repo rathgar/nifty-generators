@@ -24,6 +24,8 @@
   <%% end %>
 </table>
 
+<%%= <%= render_pagination %> %>
+
 <%- if action? :new -%>
 <p><%%= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path %></p>
 <%- end -%>

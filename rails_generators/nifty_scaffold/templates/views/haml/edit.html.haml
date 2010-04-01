@@ -1,6 +1,10 @@
 - title "Edit <%= singular_name.titleize %>"
 
-<%= render_form %>
+- form_for @<%= singular_name %> do |f|
+  = f.error_messages
+  <%= render_form %>
+  %p
+    = f.submit "Update"
 
 <%- if actions? :show, :index -%>
 %p

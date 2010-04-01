@@ -20,6 +20,8 @@
       %td= link_to 'Destroy', <%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
       <%- end -%>
 
+= <%= render_pagination %>
+
 <%- if actions? :new -%>
 %p= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path
 <%- end -%>

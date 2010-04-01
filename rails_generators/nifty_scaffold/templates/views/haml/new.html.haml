@@ -1,6 +1,10 @@
 - title "New <%= singular_name.titleize %>"
 
-<%= render_form %>
+- form_for @<%= singular_name %> do |f|
+  = f.error_messages
+  <%= render_form %>
+  %p
+    = f.submit "Create"
 
 <%- if action? :index -%>
 %p= link_to "Back to List", <%= plural_name %>_path
